@@ -1,4 +1,4 @@
-name = 'James Bond'
-lastname = name[6:]
+s = 'James Bond'
+s2 = s[6:]
 
-print(lastname + ', ' + name)
+print(s2 + ', ' + s)

@@ -1,4 +1,4 @@
-phrase = 'burger king'
-phrase2 = phrase.upper()
+s = 'burger king'
+s2 = s.upper()
 
-print(phrase2)
+print(s2)
