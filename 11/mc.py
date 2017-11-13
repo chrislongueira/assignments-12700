@@ -61,6 +61,28 @@ def word_dict(f):
         d[last] = []
     return d
 
+def build_trigram(file):
+    text = open(file).read()
+    ret_dic = {}
+    w_list = text.split()
+    for i in range(len(w_list)-1):
+        w = w_list[i].lower()
+        w = remove_non_alpha(w)
+        w2 = w_list[i+1].lower()
+        w2 = remove_non_alpha(w2)
+        #print (w,w2)
+        ret_dic.setdefault((w,w2),[])
+        for x in range(3):
+            if (x+i < len(w_list)):
+                w3 = w_list[i+x].lower()
+                w3 = remove_non_alpha(w3)
+                ret_dic[(w,w2)].append(w3)
+    return ret_dic
+
+
 hamlet = bwcff("hamlet.txt")
 psalms = bwcff("psalms.txt")
+
+p = build_trigram("hamlet.txt")
+print(p)
 sonnets = bwcff("sonnets.txt")
