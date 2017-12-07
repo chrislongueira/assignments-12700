@@ -78,11 +78,11 @@ std::string tri3(int h) {
 }
 int main(){
   rect(5, 7);
-  std::cout << "============" << std::endl;
+  std::cout << "-" << std::endl;
   tri1(6);
-  std::cout << "============" << std::endl;
+  std::cout << "-" << std::endl;
   tri2(3);
-  std::cout << "============" << std::endl;
+  std::cout << "-" << std::endl;
   tri3(5);
   return 0;
 }
